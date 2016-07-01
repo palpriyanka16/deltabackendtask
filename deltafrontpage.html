@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+<style>
+input[type=text], select ,input[type=email],input[type=file],input[type=password]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #3366CC;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color:#330099 ;
+}
+
+form {width:50em;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left:20em;
+}
+a:link{text-decoration:none;
+       color:black;}
+a:visited{text-decoration:none;
+       color:black;}       
+
+#header{background-color:#00CCFF;
+        z-index:3;
+        position:fixed;
+        width:100%;
+        padding:10px;
+        margin-top:-10em;
+       } 
+ body{background-color:white;
+      margin-top:10em;
+      }            
+</style>
+</head>
+<body>
+    <div id="header">
+	<p style="font-family:Comic Sans MS;font-size:24px;">Welcome to our page</p>
+	<a href="deltaregister.html" style="margin-left:40em;font-family:Comic Sans MS;">SIGN UP</a>
+	<a href="deltalogin.html"   style="margin-left:1em;font-family:Comic Sans MS;">VIEW ACCOUNT DETAILS</a>
+    <a href="editdetails.html" style="margin-left:1em;font-family:Comic Sans MS;">EDIT PROFILE</a>
+    <a href="viewprofilepic.html" style="margin-left:1em;font-family:Comic Sans MS;">VIEW  PROFILE PICTURE</a>
+    </div>
+
+   
+  <form action="/login" method="post" enctype="multipart/form-data">
+    
+
+    <label for="username">User Name</label><br>
+    <input type="text" id="username" name="username" required placeholder="Enter your username" autocomplete=off/><br>
+
+    
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required placeholder="Enter password" autocomplete=off/><br>
+
+    <!--<label for="choose">Enter 1 to view profile picture or 2 to view account details</label><br>
+    <input id="option" name="option"   required/></br>-->
+            
+
+  
+    <input type="submit" value="LOG In">
+  </form>
+
+     
+</body>
+</html>	

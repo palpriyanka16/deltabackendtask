@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>SIGN UP</title>
+<style>
+input[type=text], select ,input[type=email],input[type=file],input[type=password]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #3366CC;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #330099;
+}
+a:link{text-decoration:none;
+       color:black;}
+a:visited{text-decoration:none;
+       color:black;} 
+
+
+form {width:50em;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left:20em;
+}
+.error {
+  width  : 100%;
+  padding: 0;
+ 
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+ 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+#header{
+        background-color:#00CCFF;
+        z-index:3;
+        position:fixed;
+        width:100%;
+        padding-top:35px;
+        margin-top:-10em;
+        height:5em;
+       } 
+ body{
+      background-color:white;
+      margin-top:10em;
+      }
+
+</style>
+<body>
+<div id="header">
+<a href="deltafrontpage.html" style="margin-left:40em;font-family:Comic Sans MS;">HOME</a>
+<a href="deltalogin.html" style="margin-left:1em;font-family:Comic Sans MS;">VIEW ACCOUNT DETAILS</a>
+<a href="editdetails.html" style="margin-left:1em;font-family:Comic Sans MS;">EDIT PROFILE</a>
+<a href="viewprofilepic.html" style="margin-left:1em;font-family:Comic Sans MS;">VIEW  PROFILE PICTURE</a> 
+</div> 
+
+<h3 style="margin-left:17em;">Register with your account details</h3>
+
+
+
+  <form action="/register" method="post" enctype="multipart/form-data">
+    <fieldset>
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" required placeholder="Enter your name" autocomplete=off/><br>
+     
+    <label for="username">User Name</label><br>
+    <input type="text" id="username" name="username" required placeholder="Enter your username" autocomplete=off/><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required placeholder="Enter your email id" size="30"autocomplete=off/><br>
+     
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required placeholder="Enter password" autocomplete=off/><br>
+
+    <label for="confirmpassword">Confirm Password:</label><br>
+    <input type="password" id="confirmpassword" name="confirmpassword" required placeholder="Reenter password" autocomplete=off/><br>
+     
+
+    <label for="profilepic">Profile Pic:</label><br>
+    <input type="file" id="profilepic" onchange="previewFile()"name="profilepic" required placeholder="Upload a profile picture" autocomplete=off /><br>
+    <img src="" height="200" alt="Image preview..."><br><br>
+            
+
+  
+    <input type="submit" value="Submit">
+</fieldset>
+  </form>
+<script>
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}</script>
+
+</body>
+</html>
