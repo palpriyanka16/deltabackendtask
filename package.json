@@ -1,0 +1,29 @@
+{
+  "name": "deltabackendtask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deltabackendtask.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "emailjs": "^1.0.8",
+    "formidable": "^1.1.1",
+    "passwordless": "^1.1.2",
+    "passwordless-mongostore": "^0.1.4",
+    "redis": "^2.6.5",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palpriyanka16/deltabackendtask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palpriyanka16/deltabackendtask/issues"
+  },
+  "homepage": "https://github.com/palpriyanka16/deltabackendtask#readme"
+}
